@@ -7,7 +7,10 @@
     "build": "tsc",
     "dev": "yarn build --watch --preserveWatchOutput",
     "lint": "eslint src --ext js,ts",
-    "test": "jest"
+    "test": "jest",
+    "api-report": "api-extractor run",
+    "api-docs": "api-documenter markdown -i temp -o docs",
+    "build-with-docs": "yarn build && yarn api-report && yarn api-docs"
   },
   "license": "MIT",
   "devDependencies": {
